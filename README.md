@@ -5,7 +5,8 @@
 ![workflow badge](https://github.com/didier-durand/microservices-on-cloud-kubernetes/workflows/Microservices%20on%20GKE/badge.svg)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-The purpose of this repository is to provide the fully automated setup of a nice-looking (see [screenshots](https://github.com/GoogleCloudPlatform/microservices-demo#screenshots)) showcase / testbed for a cloud-native application ([precisely explained](https://docs.microsoft.com/en-us/dotnet/architecture/cloud-native/definition) 
+The purpose of this repository is to provide the fully automated setup of a nice-looking (see [screenshots](https://github.com/GoogleCloudPlatform/microservices-demo#screenshots)) 
+showcase / testbed for a cloud-native ([precisely defined](https://docs.microsoft.com/en-us/dotnet/architecture/cloud-native/definition) application
 by Microsoft) on a cloud-hosted Kubernetes cluster (here [GKE by Google Cloud](https://cloud.google.com/kubernetes-engine)) based on an interesting [service mesh](https://www.redhat.com/en/topics/microservices/what-is-a-service-mesh). 
 So, additionally, the setup will install tooling (coming from the [CNCF Cloud Trail Map](https://github.com/cncf/trailmap) for many of them) to make the application and its service mesh observable and manageable.
 
@@ -18,7 +19,7 @@ Another goal of this repository is to help people exploring the cloud-native arc
 "real-life" application and decent tooling to experiment with, without the need for a long trial-and-error process starting with infrastructure to set it 
 up from scratch. It makes it much faster to grasp the philosophy of the distributed architecture proposed by Kubernetes.
 
-So, happy forking for your own use! (see [Setup section](https://github.com/didier-durand/microservices--on-cloud-kubernetes#setup-for-forks) for all 
+So, happy forking for your own use! (see [Setup section](#setup-for-forks) for all 
 technical details) And come back regularly or get notified by following this repository: we will add additional tools in subsequent updates.
 
 We implement here a Github workflow (see also [microservices-on-gke.yml](https://github.com/didier-durand/microservices-on-cloud-kubernetes/.github/workflows/microservices-on-gke.yml)
