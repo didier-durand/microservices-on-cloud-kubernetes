@@ -1,0 +1,51 @@
+name: Terminate Online Boutique
+
+on:  
+
+  workflow_dispatch:
+    inputs:
+      workflowAction:
+        description: 'Action'
+        default: 'Terminate Online Boutique'
+        required: true
+        
+  
+  
+env:
+  GCP_PROJECT: ${{ secrets.GCP_PROJECT }}
+  GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+  GKE_CREATE: false
+  APPL_DEPLOY: false
+  APPL_DELETE: true
+  GKE_DELETE: true
+
+jobs:
+  terminate-online-boutique:
+  
+    runs-on: ubuntu-latest
+
+    steps:
+      
+    - name: Check env vars & requested action
+      #https://github.blog/changelog/2020-07-06-github-actions-manual-triggers-with-workflow_dispatch/
+      run: |-
+        echo "requested action: ${{ github.event.inputs.workflowAction }}" 
+        echo '### env variables:'
+        echo "gcp project: $GCP_PROJECT"
+        echo "gcp sa key: $GCP_SA_KEY"
+        echo "gke create: $GKE_CREATE"
+        echo "appl deploy: $APPL_DEPLOY"
+        echo "appl delete: $APPL_DELETE"
+        echo "gke delete: $GKE_DELETE"
+        
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Setup gcloud CLI
+      uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      with:
+        project_id: ${{ secrets.GCP_PROJECT }}
+        service_account_key: ${{ secrets.GCP_SA_KEY }}
+        
+    - name: Deploy application on GKE
+      run: sh/microservices-on-gke.sh 
