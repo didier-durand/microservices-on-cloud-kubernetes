@@ -22,8 +22,7 @@ up from scratch. It makes it much faster to grasp the philosophy of the distribu
 So, happy forking for your own use! (see [Setup section](#setup-for-forks) for all 
 technical details) And come back regularly or get notified by following this repository: we will add additional tools in subsequent updates.
 
-We implement here a Github workflow ([microservices-on-gke.yml](.github/workflows/microservices-on-gke.yml) & [shells in sh directory](sh/)
-- see our [other repository](https://github.com/didier-durand/gcp-workflows-on-github) for other workflows)
+We implement here a Github workflow ([microservices-on-gke.yml](.github/workflows/microservices-on-gke.yml) & [shells in sh directory](sh/) - see our [other repository](https://github.com/didier-durand/gcp-workflows-on-github) for other workflows)
 which allows to automatically deploy a fresh cluster on GKE and to deploy the application on it whenever needed via a [single click](https://github.blog/changelog/2020-07-06-github-actions-manual-triggers-with-workflow_dispatch/). 
 On our side, this same workflow is also started automatically on a recurring basis (at least weekly) via Github's cron facility (included in workflow yaml) 
 to make sure that the deployment remains fully operational as underlying GKE infrastructure and implemented components evolve. You can access logs 
@@ -57,11 +56,11 @@ utilities as we did in our [Knative project](https://github.com/didier-durand/kn
 
 ## Access to deployed tools & dashboards
 
-You have first to implement the requirements of the [Setup section](https://github.com/didier-durand/microservices-on-cloud-kubernetes) 
+You have first to implement the requirements of the [Setup section](#setup-for-forks) 
 before trying to access the dashboards.
 
 To keep things simple, we access all tools and dashboards via the proxy functions available in Kubernetes: either directly via *'kubectl proxy'* 
-or indirectly via *'istioctl dashboard'*. Only limited additional definitions are then required: it's just fine for a demo and initial tests. 
+or indirectly via *'istioctl dashboard xxx'*. Only limited additional definitions are then required: it's just fine for a demo and initial tests. 
 Of course, the laptop running the proxies must be authentified to gcloud via SDK with proper credentials giving rights to cluster administration.
 
 __**Available dashboards:**__
@@ -121,7 +120,7 @@ is accessed via *'istioctl dashboard prometheus'* that will open the correspondi
 <img src="img/screenshots/envoy-dashboard.jpg" height="200">
 
 7. **Envoy dashboard**: an improved version of [Envoy Proxy](https://www.envoyproxy.io/docs/envoy/latest/intro/what_is_envoy), also part of the CNCF Cloud Trail Map,  is the [sidecar
-  container](https://istio.io/latest/docs/concepts/what-is-istio/) used by Istio. Envoy provides a (somewhat rough) dashboard to go into the 
+  container](https://istio.io/latest/docs/concepts/what-is-istio/#why-use-istio) used by Istio. Envoy provides a (somewhat rough) dashboard to go into the 
   nitty-gritty details of a given pod: it is usually used for low-level introspection into the traffic between pods in unexpected situations. It is 
   more a debugging tool at very low-level: most cluster administrators shouldn't need to use it. This dashboard is accessed via *'istioctl 
   dashboard envoy podname[.namespace]'*: it will open the corresponding UI for the chosen pod sidecar into your web browser.
