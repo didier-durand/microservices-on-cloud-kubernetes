@@ -22,11 +22,12 @@ up from scratch. It makes it much faster to grasp the philosophy of the distribu
 So, happy forking for your own use! (see [Setup section](#setup-for-forks) for all 
 technical details) And come back regularly or get notified by following this repository: we will add additional tools in subsequent updates.
 
-We implement here a Github workflow (see also [microservices-on-gke.yml](https://github.com/didier-durand/microservices-on-cloud-kubernetes/.github/workflows/microservices-on-gke.yml)
-and our [full repository](https://github.com/didier-durand/gcp-workflows-on-github) for other workflows)
+We implement here a Github workflow ([microservices-on-gke.yml](.github/workflows/microservices-on-gke.yml & [shells in sh directory](sh/)
+- see our [other repository](https://github.com/didier-durand/gcp-workflows-on-github) for other workflows)
 which allows to automatically deploy a fresh cluster on GKE and to deploy the application on it whenever needed via a [single click](https://github.blog/changelog/2020-07-06-github-actions-manual-triggers-with-workflow_dispatch/). 
-On our side, this same workflow is also started automatically on a recurring basis (at least weekly) via Github's cron facility (included in workflow yaml) to make sure that the deployment remains fully 
-operational as underlying GKE infrastructure and implemented components evolve. You can access logs of previous runs in the [Actions Tab](https://github.com/didier-durand/microservices-on-cloud-kubernetes/actions).
+On our side, this same workflow is also started automatically on a recurring basis (at least weekly) via Github's cron facility (included in workflow yaml) 
+to make sure that the deployment remains fully operational as underlying GKE infrastructure and implemented components evolve. You can access logs 
+of previous runs in the [Actions Tab](actions/).
 
 ## Access to application & load generator
 
