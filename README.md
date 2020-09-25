@@ -11,7 +11,7 @@ by Microsoft) on a cloud-hosted Kubernetes cluster (here [GKE by Google Cloud](h
 So, additionally, the setup will install tooling (coming from the [CNCF Cloud Trail Map](https://github.com/cncf/trailmap) for many of them) to make the application and its service mesh observable and manageable.
 
 This application, licensed under Apache terms (same terms for all components used in this worklfow - So, allowing free reuse) is the ["Online Boutique"](https://github.com/GoogleCloudPlatform/microservices-demo)
- (formerly known as Hispter Shop - developed by a Google team but not an official product of them). It is composed of 10 polyglot microservices behind a nice-looking web frontend calling them to serve client requests. 
+ (formerly known as Hipster Shop - developed by a Google team but not an official product of them). It is composed of 10 polyglot microservices behind a nice-looking web frontend calling them to serve client requests. 
  A load-generator - part of the package - will generate traffic while the application is running to make use of tools (Prometheus, OpenTelemetry, 
  etc.) more attractive.
 
