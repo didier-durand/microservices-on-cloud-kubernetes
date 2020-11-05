@@ -4,7 +4,7 @@
 export GCP_VERBOSITY='warning'
 export GCP_ZONE='us-central1-c'
 export GKE_CHANNEL='rapid'
-export GKE_VERSION='1.18.6-gke.4801'
+export GKE_VERSION='1.18.10-gke.601'
 export GKE_NODES=3
 export GKE_MACHINE='n1-standard-2'
 export PROMETHEUS_NS='monitoring'
@@ -18,7 +18,7 @@ update_gcloud_sdk()
   which gcloud
   gcloud components install beta --quiet
   gcloud components update --quiet
-  which gcloud
+  echo "gcloud path: $(which gcloud)"
 }
 
 gcloud_get_info() 
