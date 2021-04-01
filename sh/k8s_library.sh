@@ -4,7 +4,7 @@
 export GCP_VERBOSITY='warning'
 export GCP_ZONE='us-central1-c'
 export GKE_CHANNEL='rapid'
-export GKE_VERSION='1.20.4-gke.1800'
+export GKE_VERSION='1.20.4-gke.2200'
 export GKE_NODES=3
 export GKE_MACHINE='n1-standard-2'
 export PROMETHEUS_NS='monitoring'
