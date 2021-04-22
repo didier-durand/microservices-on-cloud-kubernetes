@@ -9,8 +9,8 @@ on:
         default: 'Full Cycle for Online Boutique'
         required: true
         
-  schedule:
-    - cron:  '33 3 * * THU' 
+  #schedule:
+  #  - cron:  '33 3 * * THU' 
   
   
 env:
